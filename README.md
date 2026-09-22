@@ -1,37 +1,47 @@
-# Enhanced Crop Yield Prediction
+# Smart Crop Productivity Optimizer
 
-This project presents a machine learning model designed to predict crop yield based on historical crop and year data.
+This project presents a machine learning system designed to analyze agricultural conditions and estimate crop productivity under different soil and environmental conditions.
 
-The system uses a Random Forest Regressor to model the relationship between crop type and yield over time, providing a data-driven approach to crop productivity analysis.
+The system uses agricultural and environmental features to provide data-driven insights that can support crop productivity planning and optimization.
 
 ## Dataset
 
-The dataset contains historical crop yield records with information about the year, crop type, and crop yield measured in hectograms per hectare (hg/ha).
+The project uses agricultural data containing:
+
+* Nitrogen (N)
+* Phosphorus (P)
+* Potassium (K)
+* Temperature
+* Humidity
+* Rainfall
+* Soil pH
+
+The target variable represents estimated crop productivity.
 
 ## Model
 
-The project uses a Random Forest Regressor to predict crop yield.
+A **Random Forest Regressor** is used to estimate crop productivity.
 
-The input features include:
-
-* Year
-* Crop Type
-
-Crop Type is one-hot encoded before being used by the model.
-
-The preprocessing pipeline includes categorical encoding, feature standardization, and a train/test split for model evaluation.
+The model learns relationships between soil nutrients, environmental conditions, and expected productivity.
 
 ## Performance
 
-The model achieved a Mean Squared Error (MSE) of approximately **2.41 × 10⁹** on the available dataset.
+The model achieved approximately:
 
-The performance can be further improved by incorporating additional agricultural and environmental features.
+* **R² Score:** 0.92
+* **Mean Squared Error:** 55.91
+
+These results were obtained using the reconstructed prototype dataset.
 
 ## Development Tools
 
 Python
-Scikit-learn
 Pandas
 NumPy
-* Random Forest
-* Machine Learning
+Scikit-learn
+Random Forest Regressor
+Machine Learning
+
+## Future Development
+
+Future improvements may include integrating real-time weather data, soil sensor measurements, irrigation information, and additional crop-specific features to improve productivity optimization.
